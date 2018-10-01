@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Picturegram</title>
+
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		body {
+			background: yellow;
+		}
+
+		h1{
+			color:blue;
+		font-family: "Savoye LET";
+		font-weight: auto;
+		font-size: 70px;
+		margin-bottom: 0px;
+		}
+
+		h6{
+			color:blue;
+		font-family: "Savoye LET";
+		font-weight: auto;
+		font-size: 20px;
+		margin-top: 0px;
+		}
+
+		img;hover {
+			border: 2px solid red;
+			cursor: pointer;
+
+		}
+		
+		#content {
+			width: 550px;
+			margin: auto;
+		}
+		#mainpic {
+					width: calc(100%);
+					height: auto;
+					margin: 5px;
+					border: solid blue;
+						
+		}
+
+		.smallpic {
+					width: calc(33.333333% - 13px);
+					height:auto;
+					margin: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="content">
+
+	<h1>allmightgram</h1>
+	 <h6>@iamhere</h6>
+
+	<img src="https://media1.tenor.com/images/09000a962d37a2ff43129935f76f607b/tenor.gif?itemid=5442821" id="mainpic">
+	<img src="https://78.media.tumblr.com/2f7b41744864cd7c46ca2371df508277/tumblr_owlumesctj1vy2tgqo6_400.jpg"class="smallpic" >
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwqb3ERGsvpOcpgOEnFRqpEyF4w810TcULmFOKHjLG4aAL79KrFQ"class="smallpic" >
+	<img src="https://66.media.tumblr.com/a6bcc347acc646d4d6723da36334fe17/tumblr_owlumesctj1vy2tgqo8_250.png"class="smallpic" >
+	<img src="https://66.media.tumblr.com/9ed437bfe0b278b970ae6b723c4e179e/tumblr_owlumesctj1vy2tgqo5_250.jpg"class="smallpic" >
+	<img src="https://66.media.tumblr.com/f08e0b14ef15c4db5b981289bd1634f3/tumblr_owlumesctj1vy2tgqo9_250.png"class="smallpic" >
+	<img src="https://66.media.tumblr.com/057e3d33a6e5b50f9b4f7b38e67a2980/tumblr_owlumesctj1vy2tgqo4_250.jpg"class="smallpic" >
+	<img src="https://66.media.tumblr.com/04bb4f99dbf7366b0a3664619653eeed/tumblr_owlumesctj1vy2tgqo7_250.jpg"class="smallpic" >
+	<img src="https://scontent-sea1-1.cdninstagram.com/vp/c3ec3ba23f915fba1d15a6df3417e815/5C3B92FE/t51.2885-15/e35/c0.50.400.400/39102127_1090398297783500_174614184636448768_n.jpg"class="smallpic" >
+	<img src="https://66.media.tumblr.com/a721371401d34a53efc522f059d73ac4/tumblr_owlumesctj1vy2tgqo1_250.jpg"class="smallpic" >
+	</div>
+
+	<script type="text/javascript">
+		const bigImage = document.querySelector("#mainpic");
+		const images = document.querySelectorAll(".smallpic");
+
+		images.forEach(image => image.addEventListener("click", 
+			function(e) {
+				let clickedImage = e.target.src;
+				let swapImage = bigImage.src;
+				bigImage.src = clickedImage;
+				e.target.src = swapImage;
+			}
+			));
+	</script>
+
+</body>
+</html>
